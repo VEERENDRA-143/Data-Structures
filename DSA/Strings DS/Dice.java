@@ -8,9 +8,6 @@ public class Dice {
         
     }
 
-    
-
-
     // Combinations To form a Number in Dice
     static void NumberInDice(String p, int target) {
         if (target == 0) {
