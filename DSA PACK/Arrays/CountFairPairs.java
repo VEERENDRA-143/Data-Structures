@@ -23,7 +23,7 @@ public class CountFairPairs {
 }
 
 
-// Approch - 2
+//  ========>>>>>>   Approch - 2  <<<<<=========
 
 // public long countFairPairs(int[] nums, int lower, int upper) {
 //          Arrays.sort(nums);
