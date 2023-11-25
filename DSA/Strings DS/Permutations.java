@@ -2,9 +2,9 @@ import java.util.ArrayList;
 
 public class Permutations {
     public static void main(String[] args) {
-        System.out.println(Permutations_StringList("", "abcd"));
+        Permutations_String("", "abcd");
 
-        System.out.println(PermutationsCount("", "abcd"));
+        // System.out.println(PermutationsCount("", "abcd"));
     }
 
     static void Permutations_String(String p, String up) {
