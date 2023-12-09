@@ -1,0 +1,182 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "java",
+            "name": "Current File",
+            "request": "launch",
+            "mainClass": "${file}"
+        },
+        {
+            "type": "java",
+            "name": "BinarySearch",
+            "request": "launch",
+            "mainClass": "BinarySearch",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "CheckNandItsDoubleExits",
+            "request": "launch",
+            "mainClass": "CheckNandItsDoubleExits",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "CountNegitiveNumbersInArray",
+            "request": "launch",
+            "mainClass": "CountNegitiveNumbersInArray",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "DifferenceofSumProduct",
+            "request": "launch",
+            "mainClass": "DifferenceofSumProduct",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "DistanceValue",
+            "request": "launch",
+            "mainClass": "DistanceValue",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "FindDifference",
+            "request": "launch",
+            "mainClass": "FindDifference",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "Find_Kth_MissingPosition",
+            "request": "launch",
+            "mainClass": "Find_Kth_MissingPosition",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "FirstAndLastPosition",
+            "request": "launch",
+            "mainClass": "FirstAndLastPosition",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "Guss_a_Number",
+            "request": "launch",
+            "mainClass": "Guss_a_Number",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "InterSectionOfTwoArrays",
+            "request": "launch",
+            "mainClass": "InterSectionOfTwoArrays",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "IntersctionOfTwoArrys",
+            "request": "launch",
+            "mainClass": "IntersctionOfTwoArrys",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "LargestNumberAtleastTwiceTheOthers",
+            "request": "launch",
+            "mainClass": "LargestNumberAtleastTwiceTheOthers",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "Linearserch",
+            "request": "launch",
+            "mainClass": "Linearserch",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "MultiplayingWithTwo",
+            "request": "launch",
+            "mainClass": "MultiplayingWithTwo",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "NAndDouble",
+            "request": "launch",
+            "mainClass": "NAndDouble",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "PeakIndexOfMountainArry",
+            "request": "launch",
+            "mainClass": "PeakIndexOfMountainArry",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "Search2D",
+            "request": "launch",
+            "mainClass": "Search2D",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "ShuffleArray",
+            "request": "launch",
+            "mainClass": "ShuffleArray",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "SingleElementInArray",
+            "request": "launch",
+            "mainClass": "SingleElementInArray",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "SmallestElementGreaterThanTarget",
+            "request": "launch",
+            "mainClass": "SmallestElementGreaterThanTarget",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "SortArrayByParity",
+            "request": "launch",
+            "mainClass": "SortArrayByParity",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "SquareRoot",
+            "request": "launch",
+            "mainClass": "SquareRoot",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "Valid_perfect_square",
+            "request": "launch",
+            "mainClass": "Valid_perfect_square",
+            "projectName": "Searchings_7a749f"
+        },
+        {
+            "type": "java",
+            "name": "VersionControl",
+            "request": "launch",
+            "mainClass": "VersionControl",
+            "projectName": "Searchings_7a749f"
+        }
+    ]
+}

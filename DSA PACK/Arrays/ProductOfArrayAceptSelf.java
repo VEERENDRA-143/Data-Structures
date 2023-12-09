@@ -6,13 +6,13 @@ public class ProductOfArrayAceptSelf {
         System.out.println(Arrays.toString(productofarray(arr)));
     }
 
-    static int[] productofarray(int[] arr) {
-        int[] ans = new int[arr.length];
+    static int[] productofarray(int[] nums) {
+        int[] ans = new int[nums.length];
         for (int i = 0; i < ans.length; i++) {
             int temp = 1;
             for (int j = 0; j < ans.length; j++) {
                 if (i != j) {
-                    temp = temp * arr[j];
+                    temp = temp * nums[j];
                 }
             }
             ans[i] = temp;
