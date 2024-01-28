@@ -1,3 +1,4 @@
+package SingleLinkedList;
 
 public class SingleLinkedlist {
 
@@ -82,6 +83,7 @@ public class SingleLinkedlist {
         return val;
     }
     
+    // delete the value based on index
     public int delete(int index){
         if (index==0) {
             return deleteFirst();
@@ -95,6 +97,18 @@ public class SingleLinkedlist {
         previous.next = previous.next.next;
         return val;
     }
+
+    public Node find(int val){
+        Node node  = head;
+        while (node != null) {
+            if (node.value ==  val) {
+                return node;
+            }
+            node = node.next;
+        }
+        return node;
+    }
+
     // Get Reference
     public Node get(int index){
         Node node  = head;
