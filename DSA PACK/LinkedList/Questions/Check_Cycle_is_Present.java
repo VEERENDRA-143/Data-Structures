@@ -8,9 +8,9 @@ public class Check_Cycle_is_Present {
     public static void main(String[] args) {
         
     }
-    public static boolean hasCycle(MeargeTwoLinkedList head) {
-        MeargeTwoLinkedList fast = head;
-        MeargeTwoLinkedList slow = head;
+    public static boolean hasCycle(MeargeTwoLinkedList.Node head) {
+        MeargeTwoLinkedList.Node fast = head;
+        MeargeTwoLinkedList.Node slow = head;
         while(fast != null && fast.next !=null){
             fast = fast.next.next;
             slow = slow.next;
