@@ -78,6 +78,40 @@ public class MeargeTwoLinkedList {
         return ans;
     }
     
+    // reverese using Recursion
+    public void reverse(Node node){
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+        reverse(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+
+    public void revrse(){
+        if (size<2) {
+            return;
+        }
+        Node prvious = null;
+        Node present = head;
+        Node next = present.next;
+
+        while (present != null) {
+            present.next = prvious;
+            prvious = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+        head = prvious;
+    }
+
+   
+
     public static void main(String[] args) {
         MeargeTwoLinkedList list = new MeargeTwoLinkedList();
         MeargeTwoLinkedList list2 = new MeargeTwoLinkedList();
@@ -95,6 +129,8 @@ public class MeargeTwoLinkedList {
         list.display();
         list2.display();
         MeargeTwoLinkedList ans = MeargeTwoLinkedList.mearge(list,list2);
+        ans.display();
+        ans.revrse();
         ans.display();
 
     }
