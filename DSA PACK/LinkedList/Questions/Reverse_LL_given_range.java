@@ -37,4 +37,55 @@ public class Reverse_LL_given_range {
 
         return head;
     }
+
+
+    public boolean isPalindrome(ListNode head) {
+        
+        ListNode mid = middleNode(head);
+        ListNode headsecond = reverse(mid);
+
+        ListNode rereverseHead = headsecond;
+
+        while (head != null && headsecond != null) {
+            if (head.value != headsecond.value) {
+                break;
+            }
+            head = head.next;
+            headsecond = headsecond.next;
+        }
+
+        reverse(rereverseHead);
+
+        return head == null || headsecond ==null;
+    }
+
+
+    private ListNode reverse(ListNode node) {
+        if (node == tail) {
+            head = tail;
+            return;
+        }
+        reverse(node.next);
+
+        tail.next = node;
+        tail = node;
+        tail.next = null;
+    }
+        
+
+
+    private ListNode middleNode(ListNode head) {
+        ListNode f = head;
+        ListNode s = head;
+
+        while (f != null && f.next != null) {
+            s = s.next;
+            f = f.next.next;
+        }
+        return s;
+    }
+
+
+
 }
+

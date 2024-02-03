@@ -91,9 +91,9 @@ public class MeargeTwoLinkedList {
         tail.next = null;
     }
 
-    public void revrse(){
-        if (size<2) {
-            return;
+    public Node  revrse(Node head){
+        if (head == null) {
+            return head;
         }
         Node prvious = null;
         Node present = head;
@@ -107,7 +107,7 @@ public class MeargeTwoLinkedList {
                 next = next.next;
             }
         }
-        head = prvious;
+        return prvious;
     }
 
    
@@ -121,10 +121,9 @@ public class MeargeTwoLinkedList {
         list.insertLast(5);
 
         
+        list2.insertLast(5);
+        list2.insertLast(3);
         list2.insertLast(1);
-        list2.insertLast(2);
-        list2.insertLast(9);
-        list2.insertLast(14);
 
         list.display();
         list2.display();

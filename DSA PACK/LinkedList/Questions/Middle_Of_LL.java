@@ -1,7 +1,7 @@
 public class Middle_Of_LL {
-    public MeargeTwoLinkedList middle(MeargeTwoLinkedList.Node head){
-        MeargeTwoLinkedList.Node f = head;
-        MeargeTwoLinkedList.Node s = head;
+    public ListNode middle(ListNode head){
+        ListNode f = head;
+        ListNode s = head;
 
         while (f != null && f.next != null) {
             s = s.next;
