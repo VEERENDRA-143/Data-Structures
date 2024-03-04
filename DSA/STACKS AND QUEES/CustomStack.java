@@ -1,4 +1,5 @@
 public class CustomStack {
+    
     protected int[] data;
     private static final int Final_Size=10;
     int ptr = -1;
