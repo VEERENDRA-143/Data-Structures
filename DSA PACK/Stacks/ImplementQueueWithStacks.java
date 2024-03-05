@@ -17,7 +17,7 @@ public class ImplementQueueWithStacks {
         this.secondStack = new int[Size];
     }
 
-    public void push(int value){
+    public void add(int value){
         if (isFull()){
             System.out.println("stack is Full !!!");
             return;
@@ -26,7 +26,7 @@ public class ImplementQueueWithStacks {
         firstStack[ptr1]=value;
     }
 
-    public void pop(){
+    public void remove(){
 
         if (isEmpty()){
             System.out.println("Stack is Empty! No element to pop");
@@ -69,20 +69,20 @@ public class ImplementQueueWithStacks {
     }
 
     public static void main(String[] args) {
-        ImplementQueueWithStacks stack =  new ImplementQueueWithStacks(5);
-        stack.push(2);
-        stack.push(4);
-        stack.push(5);
-        stack.push(9);
-        stack.push(8);
-        stack.display();
-        stack.pop();
-        stack.display();
-        stack.push(7);
-        stack.push(6);
-        stack.push(1);
-        stack.pop();
-        stack.display();
+        ImplementQueueWithStacks queue =  new ImplementQueueWithStacks(5);
+        queue.add(2);
+        queue.add(4);
+        queue.add(5);
+        queue.add(9);
+        queue.add(8);
+        queue.display();
+        queue.remove();
+        queue.display();
+        queue.add(7);
+        queue.add(6);
+        queue.add(1);
+        queue.remove();
+        queue.display();
 
     }
 }
