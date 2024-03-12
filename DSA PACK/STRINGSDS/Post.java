@@ -4,8 +4,6 @@ public class Post {
         int b=10;
         a++; // a = a+ 1;
         b++; // b = b + 1
-        // pre inc
-        //a+ 1  = a  
         System.out.println(++a);
         System.out.println(++b);
         System.out.println(a);
