@@ -60,17 +60,17 @@ public class Reverse_LL_given_range {
     }
 
 
-    private ListNode reverse(ListNode node) {
-        if (node == tail) {
-            head = tail;
-            return;
-        }
-        reverse(node.next);
+    // private ListNode reverse(ListNode node) {
+    //     if (node == tail) {
+    //         head = tail;
+    //         return;
+    //     }
+    //     reverse(node.next);
 
-        tail.next = node;
-        tail = node;
-        tail.next = null;
-    }
+    //     tail.next = node;
+    //     tail = node;
+    //     tail.next = null;
+    // }
         
 
 

@@ -22,7 +22,7 @@ public class ReverseVowels {
                 end--;
             }
             // if (vowels.indexOf(s.charAt(start)) >= 0 && vowels.indexOf(s.charAt(end)) >= 0) {
-            else{
+            else{   
                 s = swap(s, start,end);
                 start++;
                 end--;

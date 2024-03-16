@@ -1,4 +1,4 @@
-package Singlelikedlist;
+
 
 class LinkedList {
     Node head;
@@ -93,6 +93,31 @@ class LinkedList {
         }
     }
     
+    
+
+
+
+    public int addTwoNumbers(){
+        Node p1 = head;
+        int num=0;
+        String s="";
+        while (p1!=null) {
+            s= s+p1.value;
+            p1 = p1.next;
+        }
+        System.out.println();
+        int length1 = s.length()-1;
+        for (int i = 0; i < s.length(); i++) {
+            num += (s.charAt(i)-48)*(Math.pow(10,length1));
+            length1 = length1-1;
+        }
+        
+
+        return num;
+
+    }
+
+
 
     class Node {
         int value;
