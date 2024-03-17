@@ -95,6 +95,8 @@ public class BST {
         return Math.abs(getheight(node.left)-getheight(node.right)) <= 1 && balenced(node.left) && balenced(node.right);
     }
 
+    
+
     public static void main(String[] args) {
         BST tree = new BST();
         int[] nums={
