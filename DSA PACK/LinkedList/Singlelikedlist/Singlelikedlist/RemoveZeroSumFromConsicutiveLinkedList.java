@@ -1,4 +1,4 @@
-package Singlelikedlist;
+// package Singlelikedlist;
 
 public class RemoveZeroSumFromConsicutiveLinkedList extends LinkedList{
     
