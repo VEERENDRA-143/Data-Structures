@@ -157,6 +157,116 @@ public class SingleLinkedlist {
     }
     // displaying Elements
 
+    public int getDecimalValue(){
+        Node node = head;
+        Node temp = head;
+        int count =0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        System.out.println("Actual count = "+count);
+        int ans=0;
+        count = count-1;
+        while (node != null && count!=-1) {
+            System.out.println("node.value = "+ node.value);
+            ans = ans + node.value*((int)Math.pow(2, count));
+            System.out.println("ans = "+ans);
+            count--;
+            node = node.next;
+        }
+        System.out.println("Desimal Number is : "+ans);
+        return ans;
+    }
+
+    public void insertGreatestCommonDivisors(){
+        Node temp = null;
+        Node node  = head;
+        while (node.next!=null) {
+            temp = node;
+            node = node.next;
+            int num1 = temp.value;
+            int num2 = node.value;
+            int gcd = findGCD(num1,num2);
+            Node newNode = new Node(gcd);
+            newNode.next=temp.next;
+            temp.next = newNode;
+        }
+    }
+
+    private int findGCD(int num1, int num2) {
+       
+        if (num2 == 0)   
+            return num1; 
+
+        return findGCD(num2, num1 % num2); 
+    }
+
+    public void doubleIt(){
+        Node temp = head;
+        Node node = head;
+        int count=0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        int sum =0 ;
+        count--;
+        
+        while (node !=  null) {
+            sum = sum+(node.value*(int)Math.pow(10, count));
+            count--;
+            node = node.next;
+        }
+        sum +=sum;
+        System.out.println("sum = "+sum);
+        int dummySum = sum;
+        int sumCount=0;
+        while (dummySum !=0) {
+            sumCount++;
+            dummySum = dummySum/10;
+        }
+        System.out.println(sumCount);
+        int refer = sumCount-1;
+        SingleLinkedlist list = new SingleLinkedlist();
+        while (refer!=-1) {
+            int q = sum/(int)Math.pow(10, refer);
+            System.out.println("q = "+q);
+
+            list.insertLast(q);
+            System.out.println("q = "+ q);
+            sum = sum % (int)Math.pow(10, refer);
+            System.out.println();
+            refer--;
+        }
+        list.diplay();
+    }
+
+    public void swapNodes(int k){
+        Node temp = head;
+        Node node = head;
+        Node node2 = head;
+        int count=0;
+        while (temp != null) {
+            count++;
+            temp = temp.next;
+        }
+        int fromFirst = count-k;
+        
+        while (k > 0) {
+            node = node.next;
+            k--;
+        }
+        while (fromFirst>0) {
+            node2 = node2.next;
+            fromFirst--;
+        }
+        int a = node.value;
+        node.value = node2.value;
+        node2.value = a;
+        diplay();
+    }
+
     public void diplay() {
         Node temp = head;
 
@@ -190,6 +300,44 @@ public class SingleLinkedlist {
         return max;
     }
 
+    public void reorderList(){
+        Node slow = head;
+        Node fast = head.next;
+        while (fast.next != null) {
+            slow = slow.next;
+            fast = fast.next.next;
+        }
+        // System.out.println(slow.value);
+        Node dummy = slow.next;
+        // System.out.println(dummy.value);
+        
+        // Reverse LL from mid to end
+        Node prvious = null;
+        Node present = dummy;
+        Node next = present.next;
+        while (present != null) {
+            present.next = prvious;
+            prvious = present;
+            present = next;
+            if (next != null) {
+                next = next.next;
+            }
+        }
+
+
+        SingleLinkedlist list = new SingleLinkedlist();
+        while (prvious != null) {
+            // System.out.print(prvious.value+" -> ");
+            // System.out.println(head.value + "=>");
+            
+            list.insertLast(head.value);
+            list.insertLast(prvious.value);
+            
+            prvious = prvious.next;
+            head = head.next;
+        }
+        list.diplay();
+    }
 
     // Createing a Node [ Node have its value and pointer to next-node ]
     private class Node {

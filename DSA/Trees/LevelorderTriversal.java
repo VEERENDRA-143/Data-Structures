@@ -72,8 +72,8 @@ public class LevelorderTriversal {
 
         // ZigZag level order of the tree
         public List<List<Integer>> zigzagLevelOrder(TreeNode root) {
-            List<List<Integer>> result = new ArrayList<>();
 
+            List<List<Integer>> result = new ArrayList<>();
             if (root == null) {
               return result;
             }
