@@ -2,7 +2,7 @@ public class RemoveOccurenceOfElement {
     public static void main(String[] args) {
         
         int[] nums = {0,0,1,1,1,2,2,3,3,4,4,5,6,6};
-        System.out.println(removeDuplicates(nums));
+        System.out.println(removeElement(nums,6));
 
     }
     public static int removeElement(int[] nums, int val) {
@@ -17,6 +17,7 @@ public class RemoveOccurenceOfElement {
         
         return count;
     }
+
     public static int removeDuplicates(int[] nums) {
         int count=1;
         for (int i = 1; i < nums.length; i++) {
