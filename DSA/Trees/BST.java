@@ -1,3 +1,8 @@
+import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.List;
+import java.util.Queue;
+
 public class BST {
     public class Node {
         int value;
@@ -40,24 +45,24 @@ public class BST {
         return node;
     }
 
-    public void populate(int[] nums){
+    public void populate(int[] nums) {
         for (int i = 0; i < nums.length; i++) {
             this.insert(nums[i]);
         }
     }
 
-    public void populateSorted(int[] nums){
-        populateSorted(nums,0,nums.length-1);
+    public void populateSorted(int[] nums) {
+        populateSorted(nums, 0, nums.length - 1);
     }
 
-    public void populateSorted(int[] nums,int start,int end){
-        if (start>=end) {
+    public void populateSorted(int[] nums, int start, int end) {
+        if (start >= end) {
             return;
         }
-        int mid = (start+end)/2;
+        int mid = (start + end) / 2;
         this.insert(nums[mid]);
         populateSorted(nums, start, mid);
-        populateSorted(nums, mid+1, end);
+        populateSorted(nums, mid + 1, end);
     }
 
     public int getheight(Node node) {
@@ -84,7 +89,7 @@ public class BST {
         display(node.right, details + " Right child of " + node.getValue() + " : ");
     }
 
-    public boolean balenced(){
+    public boolean balenced() {
         return balenced(root);
     }
 
@@ -92,18 +97,18 @@ public class BST {
         if (node == null) {
             return true;
         }
-        return Math.abs(getheight(node.left)-getheight(node.right)) <= 1 && balenced(node.left) && balenced(node.right);
+        return Math.abs(getheight(node.left) - getheight(node.right)) <= 1 && balenced(node.left)
+                && balenced(node.right);
     }
 
-    
 
     public static void main(String[] args) {
         BST tree = new BST();
-        int[] nums={
-            5,2,8,7,1,4,6,9,8,3,10
+        int[] nums = {
+                5, 2, 8, 7, 1, 4, 6, 9, 8, 3, 10
         };
-        int[] nums2={
-            1,2,3,4,5,6,7,8,9,10
+        int[] nums2 = {
+                1, 2, 3, 4, 5, 6, 7, 8, 9, 10
         };
         tree.populate(nums);
         tree.display();
