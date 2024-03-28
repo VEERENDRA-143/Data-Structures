@@ -9,7 +9,7 @@ public class ScentencePalindrome {
         String ans = "";
         for (int i = 0; i < s.length(); i++) {
             if (reference.indexOf(s.charAt(i)) >= 0) {
-                ans+=s.charAt(i);
+                ans+=s.charAt(i);   
             }
         }
         System.out.println(ans);
