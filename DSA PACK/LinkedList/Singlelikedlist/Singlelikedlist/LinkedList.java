@@ -60,6 +60,40 @@ class LinkedList {
 
     }
 
+    public void swapPairs(){
+        Node slowNode = head;
+        Node fastNode = head.next;
+
+        while (fastNode != null ) {
+
+            System.out.println(slowNode.value);
+            System.out.println(fastNode.value);
+                
+            fastNode.next = slowNode;
+            slowNode.next = fastNode.next.next;
+            if (fastNode != null) {
+                slowNode = fastNode.next;
+            }
+            if (slowNode != null) {
+                fastNode = slowNode.next;
+            }else{
+                fastNode = null;
+            }
+
+        }
+    }
+
+    public void hasCycle() {
+        Node fast = head;
+        Node slow = head;
+        while(fast != null && fast.next !=null){
+            fast = fast.next.next;
+            slow = slow.next;
+            System.out.println(fast.value);
+            System.err.println(slow.value);
+        }
+    }
+
     public void removeZeroSumSublists(){
         Node p1 = head;
         Node p2 = head;

@@ -9,6 +9,7 @@ public class MajorityElement {
         int candidate = 0;
         
         for (int num : nums) {
+            
             if (count == 0) {
                 candidate = num;
             }
