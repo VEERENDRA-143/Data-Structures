@@ -65,6 +65,7 @@ public class BST {
         populateSorted(nums, mid + 1, end);
     }
 
+
     public int getheight(Node node) {
         if (node == null) {
             return -1;
@@ -101,6 +102,99 @@ public class BST {
                 && balenced(node.right);
     }
 
+    public void levelOrder(){
+        List<List<Integer>> result = levelOrder(root);
+        for (List<Integer> list : result) {
+            for (Integer ele : list) {
+                System.out.println(ele+" ");
+            }
+        }
+    }
+
+    public void sumOfleftLeavs(){
+       System.out.println(sumOfleftLeavs(root));
+    }
+
+    private int sumOfleftLeavs(Node root) {
+        if (root == null) {
+            return 0;
+        }
+        int res = 0;
+
+        if (root.left != null) {
+            if (root.left.left == null && root.left.right == null) {
+                res+=root.left.value;
+            }
+            else{
+                res+=sumOfleftLeavs(root.left);
+            }
+        }
+
+        res+=sumOfleftLeavs(root.right);
+
+        return res;
+
+    }
+
+    public void sumNumbers() {
+        System.out.println(sumNumbers(root,0,22));
+    }
+
+    private int sumNumbers(Node root, int pathSum,int target) {
+        if (root == null) {
+            return 0;
+        }
+        pathSum = pathSum*10 + root.value;
+        if (root.left == null && root.right == null) {
+            return pathSum;
+        }
+
+        if (pathSum == target) {
+            System.out.println("true");
+            return target;
+        }
+
+        // System.out.println(root.value);
+        return sumNumbers(root.left, pathSum,target)+sumNumbers(root.right, pathSum,target);
+        
+    }
+
+    public List<List<Integer>> levelOrder(Node root) {
+
+        List<List<Integer>> result = new ArrayList<>();
+        if (root == null) {
+          return result;
+        }
+  
+        Queue<Node> queue = new LinkedList<>();
+  
+        queue.offer(root);
+  
+        while (!queue.isEmpty()) {
+  
+          int levelSize = queue.size();
+  
+          List<Integer> currentLevel = new ArrayList<>(levelSize);
+  
+          for (int i = 0; i < levelSize; i++) {
+  
+            Node currentNode = queue.poll(); // remove the current nodes.
+            currentLevel.add(currentNode.value);
+  
+            if (currentNode.right != null) {
+              queue.offer(currentNode.right);
+            }
+            if (currentNode.left != null) {
+              queue.offer(currentNode.left);
+            }
+  
+          }
+  
+          result.add(currentLevel);
+        }
+        
+        return result;
+      }
 
     public static void main(String[] args) {
         BST tree = new BST();
@@ -112,8 +206,9 @@ public class BST {
         };
         tree.populate(nums);
         tree.display();
-        System.out.println();
-        tree.populateSorted(nums2);
-        tree.display();
+        tree.sumNumbers();
+        // System.out.println();
+        // tree.populateSorted(nums2);
+        // tree.display();
     }
 }

@@ -4,6 +4,7 @@ public class Graphs {
         Graph(5, 3);
     }
 
+    // Adjacency Matrix
     public static void Graph(int n,int m){
         int[][] adj = new int[n+1][n+1];
         

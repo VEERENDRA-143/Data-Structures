@@ -29,6 +29,60 @@ public class LinkedList {
         return node;
     }
 
+    public void delete(int num){
+        int index = 0;
+        Node temp = head;
+        while (temp.value != num) {
+            index++;
+        }
+        int step = 0;
+        Node ans = head;
+        while (step != index-1) {
+            ans = ans.next;
+            step++;
+        }
+        ans= ans.next;
+    }
+
+    public void removeNodes(){
+        removeNodes(head);
+    }
+
+    public Node removeNodes(Node head) {
+        Node prev = null, curr = head;
+        while (curr != null) {
+            Node next = curr.next;
+            curr.next = prev;
+            prev = curr;
+            curr = next;
+        }
+
+        Node dummyHead = new Node(-1);
+        Node tempPrev = dummyHead;
+        curr = prev;
+
+        while (curr != null) {
+            if (curr.value >= tempPrev.value) {
+                tempPrev.next = curr;
+                tempPrev = curr;
+                curr = curr.next;
+            } else {
+                curr = curr.next;
+            }
+        }
+        tempPrev.next = null;
+
+        Node newPrev = null, newCurr = dummyHead.next;
+        while (newCurr != null) {
+            Node next = newCurr.next;
+            newCurr.next = newPrev;
+            newPrev = newCurr;
+            newCurr = next;
+        }
+
+        return newPrev;
+    }
+
     public void display(){
         Node temp = head;
         while (temp!=null) {
