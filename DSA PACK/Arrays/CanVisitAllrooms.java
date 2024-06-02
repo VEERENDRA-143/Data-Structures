@@ -28,7 +28,7 @@ public class CanVisitAllrooms {
                 }
             }
         }
-        for (boolean visited : visit) {
+        for (boolean visited : visit) { 
             if (!visited) {
                 System.out.println("false");
                 return;
