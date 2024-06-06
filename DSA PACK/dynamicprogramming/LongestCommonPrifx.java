@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class LongestCommonPrifx {
     public static void main(String[] args) {
-        String[] strs = { "dog", "racecar", "car" };
+        String[] strs = { "dog", "doracecar", "docar" };
         longestCommonPrefix(strs);
     }
 
@@ -25,7 +25,6 @@ public class LongestCommonPrifx {
                 } else {
                     flag = 0;
                     System.out.println(ans);
-
                     return;
                 }
             }
@@ -35,6 +34,7 @@ public class LongestCommonPrifx {
         }
         System.out.println(ans);
     }
+
 
     // Approch -2 Binary Search O(n*log(n))
     public static String longestCommonPrefixbinarySerch(String[] strs) {

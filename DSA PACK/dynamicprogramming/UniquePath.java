@@ -12,9 +12,9 @@ public class UniquePath {
     public static void main(String[] args) {
         
         int[][] grid = {
-            // {0,0,0},
-            {0,1},
-            {0,0},
+            {0,0,0},
+            {0,1,0},
+            {0,0,0},
         };
         int m = grid.length, n = grid[0].length;
         System.out.println(findMinPath(m, n,grid));
