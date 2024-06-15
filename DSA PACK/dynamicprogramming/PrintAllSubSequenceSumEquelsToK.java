@@ -29,5 +29,6 @@ public class PrintAllSubSequenceSumEquelsToK {
         subset.remove(subset.size()-1);
         genareteSubsequences(nums, index+1, subset, subsets,k);
     }
+
     
 }
