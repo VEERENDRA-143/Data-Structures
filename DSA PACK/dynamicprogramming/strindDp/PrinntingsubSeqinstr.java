@@ -1,11 +1,10 @@
-package strindDp;
 
 import java.util.ArrayList;
 import java.util.List;
 
 public class PrinntingsubSeqinstr {
     public static void main(String[] args) {
-        String s = "abc";
+        String s = "bbbab";
         getSubseq(s);
     }
     public static void getSubseq(String s){
