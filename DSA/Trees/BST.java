@@ -210,5 +210,6 @@ public class BST {
         // System.out.println();
         // tree.populateSorted(nums2);
         // tree.display();
+        
     }
 }
