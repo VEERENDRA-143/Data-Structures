@@ -2,7 +2,7 @@
 public class LongestCommenSubseqences {
     public static void main(String[] args) {
         String text1 = "abcde";
-        String text2 = "ace";
+        String text2 = "bdgek";
         char[] s1 = text1.toCharArray();
         char[] s2 = text2.toCharArray();
         System.out.println(tabulation(s1, s2));
@@ -46,6 +46,7 @@ public class LongestCommenSubseqences {
         int m = s2.length;
         int[][] dp = new int[n+1][m+1];
         for (int i = 1; i <= n; i++) {
+
             for (int j = 1; j <= m; j++) {
                 int ans = 0;
                 if (s1[i-1] == s2[j-1]) {
@@ -56,6 +57,13 @@ public class LongestCommenSubseqences {
                 }
                 dp[i][j] = ans;
             }
+        }
+
+        for (int i = 0; i <=n; i++) {
+            for (int j = 0; j <=m ; j++) {
+                System.out.print(dp[i][j] +" ");
+            }
+            System.out.println();
         }
         return dp[n][m];
     }
