@@ -1,8 +1,8 @@
 
 public class LongestCommenSubseqences {
     public static void main(String[] args) {
-        String text1 = "abcde";
-        String text2 = "bdgek";
+        String text1 = "brute";
+        String text2 = "groote";
         char[] s1 = text1.toCharArray();
         char[] s2 = text2.toCharArray();
         System.out.println(tabulation(s1, s2));
@@ -14,6 +14,12 @@ public class LongestCommenSubseqences {
         int m = text2.length();
         int[][] dp = new int[n][m];
         System.out.println(memoize(n-1, m-1, text1, text2, dp));
+        for (int[] is : dp) {
+            for (int i = 0; i < is.length; i++) {
+                System.out.print(is[i]+" ");
+            }
+            System.out.println();
+        }
         return f(n-1,m-1,text1,text2);
     }
     private static int f(int ind1, int ind2, String text1, String text2) {
