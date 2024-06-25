@@ -11,5 +11,6 @@ public class GoodNumbers {
                 
             }
         }
+        return 0;
     }
 }
