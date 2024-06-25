@@ -9,11 +9,11 @@ public class BestTimeToSellOrBuyIII {
         System.out.println(ans);
         System.out.println(maxProfit(prices));
         System.out.println(tabulation(prices));
-        System.out.println(app2(0, 0, prices));
+        System.out.println("Recursive = " + app2(0, 0, prices));
         int[][] dp1 = new int[n][4];
-        System.out.println(app2Memo(0, 0, prices, dp1));
+        System.out.println("Memoization = " + app2Memo(0, 0, prices, dp1));
+        System.out.println("Tabulation = " + app2tabulation(prices));
     }
-
 
     public static int maxProfit(int[] prices) {
        
@@ -119,6 +119,20 @@ public class BestTimeToSellOrBuyIII {
         return dp[i][trans] = Math.max(prices[i]+ app2Memo(i+1, trans+1, prices, dp), app2Memo(i+1, trans, prices, dp));
     }
 
+    public static int app2tabulation(int[] prices){
+        int n = prices.length;
+        int[][] dp =new int[n+1][5];
+        for (int i = n-1; i >= 0; i--) {
+            for (int trans = 0; trans < 4; trans++) {
+                if (trans%2 == 0) {
+                    dp[i][trans] = Math.max(-prices[i] + dp[i+1][trans+1], dp[i+1][trans]) ;
+                }else{
+                    dp[i][trans] = Math.max(prices[i] + dp[i+1][trans+1], dp[i+1][trans]);
+                }
+            }
+        }
+        return dp[0][0];
+    }
     
 }
 
