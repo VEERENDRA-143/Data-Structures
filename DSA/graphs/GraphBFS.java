@@ -71,7 +71,5 @@ public class GraphBFS {
 
         graph.BFS(2);
 
-        
-
     }
 }
