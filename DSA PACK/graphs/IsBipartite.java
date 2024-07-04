@@ -1,4 +1,6 @@
 import java.util.Arrays;
+import java.util.LinkedList;
+import java.util.Queue;
 
 public class IsBipartite {
     public static void main(String[] args) {
@@ -24,14 +26,14 @@ public class IsBipartite {
                }
             }
         }
-        
+
         return true;
     }
-    private static boolean bfs(int node, int col, int[] fillColors, int[][] graph) {
+    private static boolean dfs(int node, int col, int[] fillColors, int[][] graph) {
         fillColors[node] = col;
         for (int item : graph[node]) {
             if (fillColors[item] == -1) {
-                if (!bfs(item, 1-col, fillColors, graph)) {
+                if (!dfs(item, 1-col, fillColors, graph)) {
                     return false;
                 }
             }else if (fillColors[item] == col) {
@@ -40,5 +42,24 @@ public class IsBipartite {
         }
         return true;
     }
-   
+
+    public static boolean bfs(int node,int col,int[] fillColors,int[][] graph){
+        Queue<Integer> q = new LinkedList<>();
+        q.add(node);
+        fillColors[node] = 0;
+        while (!q.isEmpty()) {
+            int item = q.poll();
+
+            for (int ele : graph[node]) {
+                if (fillColors[ele] == -1) {
+                    fillColors[item] = 1 - fillColors[node];
+                    q.add(ele);
+                }
+                else if (fillColors[item] == fillColors[node]) {
+                    return false;
+                }
+            }
+        }
+        return true;
+    }
 }

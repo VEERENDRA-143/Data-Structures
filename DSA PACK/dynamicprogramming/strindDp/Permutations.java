@@ -2,7 +2,7 @@ import java.util.ArrayList;
 
 public class Permutations {
     public static void main(String[] args) {
-        Permutations_String("", "abcd");
+        Permutations_String("", "123");
 
         // System.out.println(PermutationsCount("", "abcd"));
     }

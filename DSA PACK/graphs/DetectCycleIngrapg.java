@@ -66,6 +66,7 @@ public class DetectCycleIngrapg {
             int node  = queue.peek().first;
             int parent = queue.peek().second;
             queue.remove();
+            
             for (int adjCentNode : adj.get(node)) {
                 if (!visited[node]) {
                     visited[adjCentNode] = true;

@@ -2,9 +2,10 @@
 
 public class NQUEENS {
     public static void main(String[] args) {
-        int n = 5;
+        int n = 4;
         boolean[][] board = new boolean[n][n];
         System.out.println(queens(board, 0));
+        
     }
 
     static int queens(boolean[][] board, int row) {
