@@ -5,7 +5,6 @@ public class BaseBallScore {
         System.out.println(calPoints(operations));
     }
     public static int calPoints(String[] operations) {
-        // Stack<Integer> stack = new Stack<>();
         ArrayList<Integer> list = new ArrayList<>();
         for (String string : operations) {
             if (string.equals("C")) {
