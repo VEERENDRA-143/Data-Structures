@@ -31,10 +31,10 @@ public class NearestExitFromMazeDFS {
         }
 
         visited[row][col] = true;
-        int up =    f(row+1, col, maze, entrance, n, m,visited,dp);
-        int down =  f(row-1, col, maze, entrance, n, m,visited,dp);
-        int left =  f(row, col+1, maze, entrance, n, m,visited,dp);
-        int right = f(row, col-1, maze, entrance, n, m,visited,dp);
+        int down =    f(row+1, col, maze, entrance, n, m,visited,dp);
+        int up =  f(row-1, col, maze, entrance, n, m,visited,dp);
+        int right =  f(row, col+1, maze, entrance, n, m,visited,dp);
+        int left = f(row, col-1, maze, entrance, n, m,visited,dp);
         visited[row][col] = false;
         return dp[row][col] = Math.min(Math.min(left, right), Math.min(up, down)) + 1;
     }
