@@ -31,8 +31,6 @@ public class KhansAlgorithem {
             }
         }
 
-
-
         Queue<Integer> q = new LinkedList<>();
 
         for (int i = 0; i < inDegree.length; i++) {
