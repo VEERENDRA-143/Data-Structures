@@ -41,7 +41,7 @@ public class ShortestPathInbinaryMazeGFg {
 
             for (int[] direction: directions) {
                 int newRow = row + direction[0];
-                int newCol = col + direction[1];
+                int newCol = col + direction[1]; 
                 if (newRow >= 0 && newRow < n && newCol >= 0 && newCol < m && grid[newRow][newCol] == 1 && dis+1 < distance[newRow][newCol]) {
                     distance[newRow][newCol] = 1 + dis;
                     if (newRow == destination[0] && newCol ==destination[1]) {

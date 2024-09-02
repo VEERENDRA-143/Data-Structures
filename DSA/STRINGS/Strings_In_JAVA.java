@@ -2,7 +2,7 @@ public class Strings_In_JAVA {
     public static void main(String[] args) {
         String a = "hello";
         String b = "hello";
-        System.out.println(a==b); // True  
+        System.out.println(a==b); // TrueKe  
 
 
         String name1 = new String("hello");

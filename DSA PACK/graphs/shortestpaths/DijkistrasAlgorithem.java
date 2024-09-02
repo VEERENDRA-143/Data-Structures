@@ -5,7 +5,7 @@ public class DijkistrasAlgorithem {
 
     public static void main(String[] args) {
         ArrayList<ArrayList<ArrayList<Integer>>> adj = new ArrayList<>();
-        int src = 0;
+        int src = 0; 
         int N = 10;
     }
 
